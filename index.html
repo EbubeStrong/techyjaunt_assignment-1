@@ -6,35 +6,91 @@
     <title>TechyJaunt Assignment 1</title>
   </head>
   <body>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        color: #fff;
+        background-color: #0dc1f8;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 span{
+        color: black;
+      }
+
+      nav a{
+        text-decoration: none;
+        color: black;
+        margin: 0 10px;
+        font-size: 20px;
+      }
+
+      .text{
+        font-size: 20px;
+      }
+
+      p{
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      p a{
+        font-size: 20px;
+      }
+
+      table{
+        border-collapse: collapse; 
+        border: 2px solid black;
+      }
+
+      th{
+        border: 2px solid black; 
+        padding: 8px;
+      }
+    </style>
     <header>
-      <h1 style="color: #fff">
-        This Is a <span style="color: black">WebPage</span>
-      </h1>
+      <h1>This Is a <span>WebPage</span></h1>
+      <br />
+
+      <!-- start of nav -->
       <nav>
         <a href="#content">WebPage Contents</a>
         <a href="#table">Information Table</a>
-        <a href="">Contact Form</a>
+        <a href="£form">Contact Form</a>
       </nav>
     </header>
+    <br /><br />
     <main>
       <!-- Start of Image -->
       <section>
         <img src="./img/image.png" alt="photo" width="70%" height="40%" />
       </section>
-
       <!-- Start of text -->
       <section>
-        <p>This is a Project I'm trying to work on.</p>
+        <h2 class="text">
+          This is a Project I'm trying to work on.
+        </h2>
       </section>
+      <br><br>
 
       <!-- Start of link -->
       <section>
         <p>
           Click
-          <a href="https://www.techyjaunt.com/" target="_blank">here</a> to
-          visit TechyJaunt website
+          <a
+            href="https://www.techyjaunt.com/"
+            target="_blank"
+            >here</a
+          >
+          to visit TechyJaunt website
         </p>
       </section>
+      <br><br>
 
       <!-- Start of unordered list -->
       <section id="content">
@@ -45,76 +101,88 @@
           <li>Contact Form</li>
         </ul>
       </section>
+      <br><br>
 
       <!-- start of table -->
-       <section id="table">
-           <h2>Information Table</h2>
-           <table>
-             <thead>
-               <tr>
-                 <th>Item</th>
-                 <th>Description</th>
-                 <th>Quantity</th>
-               </tr>
-             </thead>
-     
-             <tbody>
-               <tr>
-                 <td>Pen</td>
-                 <td>Blue Ink Pens</td>
-                 <td>5</td>
-               </tr>
-     
-               <tr>
-                 <td>Notebooks</td>
-                 <td>Spiral-bound Notebooks</td>
-                 <td>3</td>
-               </tr>
-     
-               <tr>
-                 <td>Markers</td>
-                 <td>Permanent Makers</td>
-                 <td>2</td>
-               </tr>
-             </tbody>
-           </table>
-       </section>
+      <section id="table">
+        <h2>Information Table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Description</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pen</td>
+              <td>
+                Blue Ink Pens
+              </td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Notebooks</td>
+              <td>
+                Spiral-bound Notebooks
+              </td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Markers</td>
+              <td>
+                Permanent Markers
+              </td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <br /><br />
 
       <!-- Start of form -->
-       <section id="form">
-           <form action="#" method="post">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-            <br>
-    
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            <br>
-    
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-            <br>
-    
-            <label for="gender">Gender</label>
-            <input type="radio" value="Male">
-            <input type="radio" value="Female">
-            <br>
-    
-            <label for="subscribe">Subscribe</label>
-            <input type="checkbox" value="Yes, I want to subscribe">
-            <br>
-    
-            <label for="number">Number of Items</label>
-            <input type="number">
-            <br>
-    
-            <label for="date">Date</label>
-            <input type="date" name="date" id="date">
-    
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10">Write anything</textarea>
-           </form>
-       </section>
+      <section id="form">
+        <form action="#" method="post">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+          <br /><br />
+
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <br /><br />
+
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <br /><br />
+
+          <label for="gender">Gender</label>
+          <input type="radio" id="gender-male" name="gender" value="Male" />
+          Male
+          <input type="radio" id="gender-female" name="gender" value="Female" />
+          Female
+
+          <br /><br />
+
+          <label for="subscribe">Subscribe</label>
+          <input type="checkbox" value="Yes, I want to subscribe" />
+          <br /><br />
+
+          <label for="number">Number of Items</label>
+          <input type="number" />
+          <br /><br />
+
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" />
+          <br /><br />
+
+          <label for="message">Message</label>
+          <br />
+          <textarea name="message" id="message" cols="30" rows="10">
+Write anything</textarea
+          >
+        </form>
+      </section>
     </main>
   </body>
 </html>
